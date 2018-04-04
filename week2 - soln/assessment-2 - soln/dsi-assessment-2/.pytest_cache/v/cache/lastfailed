@@ -1,0 +1,8 @@
+{
+  "test/unittests.py::TestAssessment2::test_make_char_dict": true,
+  "test/unittests.py::TestAssessment2::test_merge_dictionaries": true,
+  "test/unittests.py::TestAssessment2::test_pandas_only_given_state": true,
+  "test/unittests.py::TestAssessment2::test_sql_count_neighborhoods": true,
+  "test/unittests.py::TestAssessment2::test_sql_highest_rent_increase": true,
+  "test/unittests.py::TestAssessment2::test_sql_rent_and_buy": true
+}

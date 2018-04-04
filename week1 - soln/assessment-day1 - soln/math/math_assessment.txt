@@ -1,0 +1,34 @@
+Math Assessment
+
+Refer to `math_assessment.pdf` for the questions. Please type your answers under
+each prompt in this document.
+
+
+1. Partial derivative of y with respect to x
+
+
+2. Xy
+
+
+3. Is X invertible? If so, give the inverse; if not, explain why not.
+
+
+4. Rank of X
+
+
+5. Sample mean
+
+
+6. Sample variance
+
+
+7. Probability of data given fair coin
+
+
+8. Maximum likelihood probability
+
+
+9. P(x=T | y=b)
+
+
+

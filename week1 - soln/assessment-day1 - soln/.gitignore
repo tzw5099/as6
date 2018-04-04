@@ -1,0 +1,8 @@
+*.pyc
+.idea
+.ipynb_checkpoints
+*.bak
+*.swp
+__pycache__
+.DS_Store
+.cache

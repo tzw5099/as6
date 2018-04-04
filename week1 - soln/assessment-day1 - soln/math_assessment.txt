@@ -1,0 +1,129 @@
+Math Assessment
+
+Refer to `math_assessment.pdf` for the questions. Please type your answers under
+each prompt in this document.
+
+
+1. Partial derivative of y with respect to x
+
+Using the product rule and (the special case of the product rule) that 
+the derivative of a constant times a function of x (with respect to x) 
+is the constant times the derivative of the function of x (with respect to x), 
+we have that dy/dx is 
+
+  sin(z) * ( e^(-x) - x * e^(-x) )
+
+2. Xy
+
+  [14  
+   10]
+
+3. Is X invertible? If so, give the inverse; if not, explain why not.
+
+  Yes. X is invertible since, e.g., the two columns are not linear multiples.  
+  This can also be seen since the determinant is nonzero, i.e., 
+    det(X) = 2 * 3 - 4 * 1 = 2
+    2 != 0 and a singular (or non-invertible) matrix has a determinant of zero.
+
+  To invert a 2-by-2 matrix X, we negate the off diagonal elements (here 1 and 4), 
+  and exhcange the two diagonal elements (here 2 and 3), and then divide every element
+  in the matrix by the determinant.  This procedure becomes more complicated as the 
+  matrix increases in size and thus is done numerically.  Nonetheless, the inverse of 
+  our 2-by-2 matrix X is thus 
+
+  inv(X) = 
+     1.5    -2
+     -0.5   1
+
+4. Rank of X
+
+  X is full rank with rank 2. 
+  X has 2 columns and they are linearly independent of one another.
+  i.e. one is not a multiple of the other.
+  A square matrix that is of full rank is invertible. 
+  A square matrix that is not full rank will not be invertible.
+
+5. Sample mean
+
+   While it may seem strange to take the average of coin flips, when the flip outcomes
+   (heads or tails) are encoded as 1's and 0's, respectively, it is of course perfectly
+   legitimate to take the average of coin flipping outcomes.  Further, this has the 
+   particularly useful benefit that it captures the proportion of flips that are heads 
+   (encoded as 1's). Since 1's and 0's are just numbers like any other, we simply take 
+   the mean of these numbers just as we would any other set of numbers. I.e., here:
+
+  ((1 + 1 + 0 + 1 + 0) / 5) = 0.6
+
+6. Sample variance
+   
+   Since it is evident that we can use 1's and 0's just as any other number, we can of
+   course also calculate the sample variance in our current context, as
+
+     = [(1 - 3/5)^2 + (1 - 3/5)^2 + (0 - 3/5)^2 + (1 - 3/5)^2 + (0 - 3/5)^2] / (5-1)
+     = [ 4/25 + 4/25 + 9/25 + 4/25 + 9/25 ] / 4
+     = [30/25]/4
+     = 30/100
+     = 3/10
+     
+    The reason we divide by 4 instead of 5 has to do the with the definition of sample
+    variance.  Specifically, when we divide by n - 1 (number of samples minus one), we have
+    an unbiased estimator of the population variance.  If we simply divided by n, we would
+    underestimate the sample variance.  
+
+7. Probability of data given fair coin
+
+   # Solving the "S = {1,1,0,1,0}" problem:
+
+   The probability of this sequence of head flips (assuming a fair coin)
+   is the same as *any other* sequence of head flips, i.e., (0.5)^5.
+
+   # Solving the "3 heads" problem:
+
+   The probability of seeing 3 heads in 5 flips (assuming a fair coin), 
+   (as opposed to the sequence "S = {1,1,0,1,0}"), i.e., 
+   Pr(3 heads in 5 flips), is determined by a binomial probability model with
+   n = 5 and p = 0.5. This model gives us the following formula for the probability:
+
+   5c3 * 0.5^3 * 0.5^2 = 0.3125
+
+   5c3 is five choose three and it is equal to 5!/(3!*2!).  It is the number of ways
+   we could get 3 heads on five flips. E.g., HHHTT or HTHTH, etc. And of course, the 
+   probability of a head or a tail on any given flip is the same at 0.5, which shows 
+   how the binomial probability distribution probabilities are produced.
+
+   
+
+8. Maximum likelihood probability
+
+  Supposing we have no prior opinions whatsoever regarding the chance of flipping the 
+  coin and seeing it come up heads...
+  It may be intuitively obvious that since we observed 60% of the flips to be heads,
+  the most likely value for the true chance of heads from the coin is 0.6. Failing that
+  intuition, however, we can mathematically find the probability of the coin coming up 
+  heads (p) that is most likely given the data we saw.  Finding this value p that has the
+  maximum likelihood given the data we saw is aptly named maximum likelihood estimation.  
+  To do maximum likelihood estimation we examine the binomial model with respect to the 
+  unknown pobability of getting heads on a flip, p, given the data that we've seen. I.e.,
+
+  5c3 * p^3 * (1-p)^2
+
+  What we would like to do is find the unknown p which maximizes this expression. To this 
+  end we can use a trick that is very commonly used to make maximization problem tractable.
+  I.e., the p which produces the maximum value in the above expression is the same p that 
+  will produce the maximum value in the expression 
+
+  log(5c3 * p^3 * (1-p)^2) = log(5c3) + 3log(p) + 2log(1-p)
+
+  And the value of p that acheives the maximum value of this expression can be readily found
+  by taking the derivative of the expression with respect to p, setting the to zero, and 
+  solving for p.  I.e.,
+
+  0 = 3/p - 2/(1-p) ==> 0 = 3(1-p) - 2p ==> 0 = 3 - 5p ==>  p = 3/5
+
+9. P(x=T | y=b)
+
+  Since y=b, we need the relative probability that x=T within column "b", i.e., 
+  
+  (0.1) / (0.1 + 0.15) = 0.4
+
+
