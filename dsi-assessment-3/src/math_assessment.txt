@@ -1,0 +1,89 @@
+** Probability **
+
+1. A coin is biased at 0.6 in favor of heads. What is the probability of
+flipping 8 or more heads in 10 flips of this coin?
+
+(n!/(k!(n-k)!))*(p^k)(1-p)^(n-k)
+Solve
+n = 10
+k = 8
+p = .6
+Solution = 0.120932352 = 12.09%
+
+2. You've found a secret admirer note on your desk, and don't know who it
+might've come from but you know it must've been one of your three office mates:
+Jack, John, or Jimmy.  
+
+- As of yesterday, you thought it was twice as likely that Jimmy had a crush on
+  you than John, and that John and Jack were equally likely to have a crush on
+  you.  
+- However even if Jimmy liked you, you think there'd only be 5% he'd leave you
+  a note.
+- On the other hand, if Jack liked you there'd be a whopping 50% chance he'd
+  leave you a note.
+
+and if John liked you, there'd be a 20% chance he'd leave you a note. 
+
+What's the probability that the note came from John?
+LN = Leave Note
+LY = Liked You
+Pjack(LN) = Sum(P(LN|LY) * P(LY)) of John, Jack Jimmy
+Pjack(LN) = (.2*.025)+(.5*.025)+(.05*.05)
+Pjack(LN) = .02 = 2%
+
+** Statistics **
+
+Below are the total number of log-ins to a website for 20 different randomly
+selected users from 2017:
+
+[10, 25, 12, 35, 14, 18, 16, 15, 22, 10, 9, 11, 49, 20, 15, 9, 18, 19, 20, 20]
+
+In the following questions, you can assume that this data represents a sample
+from the population of all users that used your website in 2017.
+
+3. What is the sample mean?
+(Just google the equation and plug and chug or use numpy)
+np.mean(logins) = 18.35
+
+4. What is the sample variance?
+(Just google the equation and plug and chug or use numpy)
+np.var(logins) = 86.9275
+
+5. If we randomly select another user from 2017, what is an estimate of the
+probability that he/she has more than 15 log-ins?
+
+sum(i > 15 for i in logins) = 11
+11/20 = 55%
+
+6. The sales department asserts that on average, there were at most 10 log-ins
+per user (across the entire population), however the web team thinks there were
+more.  Discuss how to set up a null hypothesis significance test, then compute
+a p-value based on the sample above to test the web team's hypothesis.  What
+conclusion do you draw?
+
+ 
+7. A major charity organization is interested to see if changing the mission
+statement on the website increases donations. As a pilot study, they randomly
+show 1 of 10 newly drawn up mission statements to each user that comes to the
+site.  As such, you set up 10 separate hypothesis tests, each testing whether
+or not there was an increase in donations. If the organization only wants to
+adopt a new mission statement if they can be reasonably sure that at least one
+of the proposed statements is better than their current, what adjustments would
+you make to account for the 10 tests?
+
+
+**  Modeling **
+
+8.  Generally, when we increase the flexibility / complexity of the model, what
+happens to the model bias?  What about the model variance?  What do we expect
+to happen to the training error?  What about the test error?
+
+9.  You have two competing models for salary at your company:
+Model 1:   Salary ~ Occupation + Height + Gender
+Model 2:   Salary ~ Occupation + Region + Height + Gender
+
+Name two appropriate ways to compare these two models.
+Name an inappropriate way to compare these two models.  
+
+
+

@@ -1,0 +1,12 @@
+{
+  "test/unittests.py::TestAssessment3::test_add_column": true,
+  "test/unittests.py::TestAssessment3::test_calculate_clickthrough_prob": true,
+  "test/unittests.py::TestAssessment3::test_calculate_t_test": true,
+  "test/unittests.py::TestAssessment3::test_df_to_numpy": true,
+  "test/unittests.py::TestAssessment3::test_linear_regression": true,
+  "test/unittests.py::TestAssessment3::test_only_positive": true,
+  "test/unittests.py::TestAssessment3::test_pandas_query": true,
+  "test/unittests.py::TestAssessment3::test_roll_the_dice": true,
+  "test/unittests.py::TestAssessment3::test_size_of_multiply": true,
+  "test/unittests.py::TestAssessment3::test_sql_query": true
+}
